@@ -75,3 +75,6 @@ Ex:
 - Ignorar revisão de código
 - Subir código sem testar
 - Fazer mudanças grandes sem explicação
+
+
+Bla Bla Blaaaaaaaaaaa
