@@ -1,1 +1,204 @@
-# Um teste pra não fazer merda no repositório principal do projeto :D 
+## Um teste pra não fazer merda no repositório principal do projeto :D 
+----------------------------------------------------------------------------------------------------------------
+# Polar
+
+Sistema web para registro e gestão de ocorrências institucionais, focado
+em substituir processos informais por um fluxo estruturado, rastreável e
+auditável.
+
+------------------------------------------------------------------------
+
+## Visão Geral
+
+O Polar está sendo desenvolvido como um MVP para resolver um problema real em
+ambiente escolar: a falta de controle e histórico de ocorrências.
+
+O sistema permite:
+
+-   registrar ocorrências;
+-   acompanhar o status;
+-   manter histórico completo;
+-   garantir responsabilidade institucional.
+
+------------------------------------------------------------------------
+
+## Funcionalidades (MVP)
+
+-   Cadastro de usuários
+-   Registro de ocorrências
+-   Controle de status:
+    -   Registrada
+    -   Em análise
+    -   Em atendimento
+    -   Resolvida
+    -   Encerrada
+-   Histórico automático (auditável)
+-   Consulta de ocorrências
+
+------------------------------------------------------------------------
+
+## Tecnologias
+
+-   Node.js
+-   Express
+-   PostgreSQL
+-   Prisma ORM
+-   React (frontend)
+
+------------------------------------------------------------------------
+
+## Estrutura do Projeto
+
+    polar/
+      backend/
+      frontend/
+      docs/
+
+------------------------------------------------------------------------
+
+## Como Executar
+
+### 1. Clonar repositório
+
+    git clone <url-do-repo>
+    cd polar
+
+------------------------------------------------------------------------
+
+### 2. Backend
+
+    cd backend
+    npm install
+    npx prisma migrate dev
+    node src/server.js
+
+Servidor rodando em:
+
+    http://localhost:3000
+
+------------------------------------------------------------------------
+
+### 3. Frontend
+
+    cd frontend
+    npm install
+    npm run dev
+
+------------------------------------------------------------------------
+
+# Sistema Anti-Quebra do Projeto
+
+## Regras da Branch Principal (main)
+- Proibido fazer push direto na `main`
+-  Todas as alterações devem ser feitas via Pull Request (PR)
+-  PR deve ter pelo menos **1 aprovação**
+-  PR só pode ser aprovado se passar pela revisão e teste
+
+------------------------------------------------------------------------
+
+## Fluxo de Trabalho
+
+1. Criar uma branch
+2. Fazer as alterações
+3. Realizar commits seguindo o padrão
+4. Abrir um Pull Request (PR)
+5. Aguardar revisão
+6. Após aprovação e testes OK - merge na `main`
+   
+------------------------------------------------------------------------
+
+## Revisão de Código (Obrigatória)
+
+Todo Pull Request deve ser revisado por outro membro da equipe.
+
+### O que deve ser analisado:
+- Funcionamento do código
+- Possíveis impactos em outras partes do sistema
+- Organização e clareza do código
+- Seguir o padrão definido
+
+------------------------------------------------------------------------
+
+## Testes Automáticos
+
+Utilizamos **GitHub Actions** para:
+- Executar testes automaticamente
+- Validar o funcionamento do sistema
+- Bloquear merges em caso de erro
+
+------------------------------------------------------------------------
+
+## Boas Práticas de Código
+
+- Testar antes de fazer commit
+- Não subir código quebrado
+- Manter organização e legibilidade
+- Comentar apenas quando necessário
+  
+------------------------------------------------------------------------
+
+## Pradronização de Commit
+
+- feat - nova funcionalidade
+- fix - correção de bug
+- docs - documentação
+- style - formatação (sem mudar lógica)
+- refactor - melhoria no código
+- test - testes
+- chore - tarefas internas (config, build)
+
+A descrição precisa ser objetiva
+
+Ex:
+   
+    feat: adiciona tela de login
+    fix: corrige erro de autenticação
+
+------------------------------------------------------------------------
+
+## O que NÃO fazer
+
+-  Commit direto na `main`
+-  Ignorar revisão de código
+-  Subir código sem testar
+-  Fazer mudanças grandes sem explicação
+  
+------------------------------------------------------------------------
+
+## Fluxo do Sistema
+
+1.  Usuário registra uma ocorrência\
+2.  Ocorrência entra como **Registrada**\
+3.  Evolui para **Em análise → Em atendimento → Resolvida → Encerrada**\
+4.  Todas as ações são registradas no histórico
+
+------------------------------------------------------------------------
+
+## Regras do Sistema
+
+-   status não pode pular etapas
+-   histórico é imutável
+-   permissões baseadas em papel do usuário
+-   ocorrências encerradas não podem ser alteradas
+
+------------------------------------------------------------------------
+
+## Objetivo do Projeto
+
+Validar um modelo de gestão de ocorrências baseado em:
+
+-   controle de fluxo
+-   rastreabilidade
+-   responsabilidade institucional
+
+------------------------------------------------------------------------
+
+## Status
+
+Em desenvolvimento (MVP)
+
+------------------------------------------------------------------------
+
+## Licença
+
+Uso acadêmico / educacional

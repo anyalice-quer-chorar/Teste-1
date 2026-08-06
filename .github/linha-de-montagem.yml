@@ -1,0 +1,19 @@
+name: Minha Primeira Linha de Montagem
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-e-teste:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Pegar o código do repositório
+        uses: actions/checkout@v3
+
+      - name: 2. Estação de Build
+        run: echo "Construindo o projeto... Verificando se tudo está no lugar!"
+
+      - name: 3. Estação de Teste
+        run: echo "Rodando os testes... Verificando se o projeto está funcionando!"
